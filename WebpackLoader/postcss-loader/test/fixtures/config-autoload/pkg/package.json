@@ -1,0 +1,15 @@
+{
+  "name": "postcss-config",
+  "version": "1.0.0",
+  "postcss": {
+    "parser": false,
+    "syntax": false,
+    "map": false,
+    "from": "./index.css",
+    "to": "./index.css",
+    "plugins": [
+      "postcss-import",
+      ["postcss-nested", {}]
+    ]
+  }
+}

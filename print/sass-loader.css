@@ -1,0 +1,113 @@
+.container {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(-15deg) rotateY(45deg);
+}
+.container .square-face {
+  position: absolute;
+  top: 200px;
+  left: 300px;
+  width: 200px;
+  height: 200px;
+}
+.container .square-face:nth-child(1) {
+  z-index: 5;
+  background-color: lightcoral;
+  animation: 2s linear 0s infinite boom1;
+}
+.container .square-face:nth-child(2) {
+  z-index: 4;
+  background-color: lightblue;
+  animation: 2s linear 0s infinite boom2;
+}
+.container .square-face:nth-child(3) {
+  z-index: 3;
+  background-color: lightseagreen;
+  animation: 2s linear 0s infinite boom3;
+}
+.container .square-face:nth-child(4) {
+  z-index: 2;
+  background-color: lightgray;
+  animation: 2s linear 0s infinite boom4;
+}
+.container .square-face:nth-child(5) {
+  z-index: 1;
+  background-color: lightslategrey;
+  animation: 2s linear 0s infinite boom5;
+}
+.container .square-face:nth-child(6) {
+  z-index: 0;
+  background-color: lightgoldenrodyellow;
+  animation: 2s linear 0s infinite boom6;
+}
+@keyframes boom1 {
+  0% {
+    transform: translateZ(100px);
+  }
+  50% {
+    transform: translateZ(150px) rotateZ(360deg);
+  }
+  100% {
+    transform: translateZ(100px) rotateZ(0);
+  }
+}
+@keyframes boom2 {
+  0% {
+    transform: translateX(-100px) rotateY(90deg);
+  }
+  50% {
+    transform: translateX(-150px) rotateY(90deg);
+  }
+  100% {
+    transform: translateX(-100px) rotateY(90deg);
+  }
+}
+@keyframes boom3 {
+  0% {
+    transform: translateY(-100px) rotateX(90deg);
+  }
+  50% {
+    transform: translateY(-150px) rotateX(90deg);
+  }
+  100% {
+    transform: translateY(-100px) rotateX(90deg);
+  }
+}
+@keyframes boom4 {
+  0% {
+    transform: translateY(100px) rotateX(90deg);
+  }
+  50% {
+    transform: translateY(150px) rotateX(90deg);
+  }
+  100% {
+    transform: translateY(100px) rotateX(90deg);
+  }
+}
+@keyframes boom5 {
+  0% {
+    transform: translateZ(-100px);
+  }
+  50% {
+    transform: translateZ(-150px);
+  }
+  100% {
+    transform: translateZ(-100px);
+  }
+}
+@keyframes boom6 {
+  0% {
+    transform: translateX(100px) rotateY(90deg);
+  }
+  50% {
+    transform: translateX(150px) rotateY(90deg);
+  }
+  100% {
+    transform: translateX(100px) rotateY(90deg);
+  }
+}
+@keyframes roll {
+  100% {
+    transform: rotateX(-15deg) rotateY(45deg) rotateZ(180deg);
+  }
+}
